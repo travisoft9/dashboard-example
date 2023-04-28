@@ -1,4 +1,4 @@
-# weebs-web
+# shadcn ui dashboard example
 
 ## prerequisites
 - nodejs

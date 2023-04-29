@@ -33,35 +33,22 @@ import { UserNav } from '@/components/user-nav';
 export default function DashboardPage() {
   return (
     <>
-      <div className="md:hidden">
-        <Image
-          src="/examples/dashboard-light.png"
-          width={1280}
-          height={866}
-          alt="Dashboard"
-          className="block dark:hidden"
-        />
-        <Image
-          src="/examples/dashboard-dark.png"
-          width={1280}
-          height={866}
-          alt="Dashboard"
-          className="hidden dark:block"
-        />
-      </div>
-      <div className="flex-col hidden md:flex">
+      <div className="flex-col md:flex">
         <div className="border-b">
           <div className="flex items-center h-16 px-4">
             <TeamSwitcher />
-            <MainNav className="mx-6" />
+            <MainNav className="hidden mx-6 md:block" />
             <div className="flex items-center ml-auto space-x-4">
-              <Search />
+              {/* <Search /> */}
               <UserNav />
             </div>
           </div>
         </div>
+        <div className="flex items-center justify-center h-16 border-b md:hidden">
+          <MainNav className="mx-6" />
+        </div>
         <div className="flex-1 p-8 pt-6 space-y-4">
-          <div className="flex items-center justify-between space-y-2">
+          <div className="flex flex-col items-center justify-between space-y-2 md:flex-row">
             <h2 className="text-3xl font-bold tracking-tight">Dashboard</h2>
             <div className="flex items-center space-x-2">
               <CalendarDateRangePicker />
